@@ -1,0 +1,10 @@
+:root {
+    --bg-body: #C3C6D7;
+    --btn-bg-border: #004AC6;
+    --color: #121C2A;
+}
+
+body {
+    font-family: "Manrope", Georgia, 'Times New Roman', Times, serif;
+    font-family: "Fraunces", Georgia, serif;
+}
