@@ -83,7 +83,7 @@ Projet réalisé à des fins pédagogiques.
 ## auteurs 
 •Chislain mouyockolo
 
-•Jude koye
+•Jude Koy
 
 •Jonathan ESAÏE 
 
