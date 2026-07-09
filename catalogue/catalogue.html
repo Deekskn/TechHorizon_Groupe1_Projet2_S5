@@ -1,12 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../layout.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue - Atm</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="catalogue.css">
 </head>
 <body>
+<main>
+    <header>
+
+    <!-- A completer par le lead sans oublier le footeur -->
+
+    </header>
+  <section class="hero">
+    <h2>Collection Curatée</h2>
+  </section>
+
+  <section class="filters">
+    <div class="filter-buttons">
+      <button class="filter-btn">
+        <span class="material-symbols-outlined">filter_list</span>
+        Filtrer par Catégorie
+      </button>
+      <button class="filter-btn">
+        <span class="material-symbols-outlined">palette</span>
+        Couleur
+      </button>
+      <button class="filter-btn">
+        <span class="material-symbols-outlined">sell</span>
+        Prix
+      </button>
+    </div>
+    <div class="sort-wrapper">
+      <span class="sort-label">Trier par :</span>
+      <select class="sort-select">
+        <option>Nouveautés</option>
+        <option>Prix croissant</option>
+        <option>Prix décroissant</option>
+        <option>Les plus populaires</option>
+      </select>
+    </div>
+  </section>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+      <div class="product-image-wrap">
+        <img alt="Enceinte Horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6dKCXXukIH2zEo0oxA2MRUJfqmp-JCxjlVFxbSe4LYRsWXHjQLbT1OsijPt8LSw1vSR0Z_lz1JCKrJmBb3WacnXiQ-U2rc9W84rx1PWL2QhYURJQdwzx95Fz7WIdw6W3V-LW7P1CRSq6iUmJNz_OSREFpYX9uW542OOqdCVeVG0siRidgZoiiV4cjT-qazcouX6juITcHFf-UnBoAg7xxMKJD_I5GDnROWrVlxijwsWQdrb053QyI4k4gHmzhJ3ulGORP_9RuNk">
+        <div class="badge"><span>Nouveau</span></div>
+        <button class="add-to-cart-btn">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </div>
+      <div class="product-info">
+        <div>
+          <h3>Enceinte Horizon</h3>
+          <p class="subtitle">Audio Haute-Fidélité</p>
+        </div>
+        <span class="price">299 €</span>
+      </div>
+      <button class="details-btn">Voir les détails</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image-wrap">
+        <img alt="Lampe de Bureau Flux" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcmtkt3Qr4Uisrc87co3QQqcYP98I6uEKZ0acNlo2_-EIBVwRKnQTsZTKNF0kgdtTA1k8zWjIP3D2OLXUzD2KMd-JPuYCQaK1p5yY3vO2h6HZJ1uLmRfrV8JlRv3MC4K46yICMvoW5cItyNO2BKODSmdYArQgJMl1vTg29MV7TtuHNgB6m9GVfs6wM4KZlkbIDC4hv4s7TAA_fuGFaSOAuXIc6QQSSY0xczBuPgxIH3CHV5dNwID7IDCMctJuhjV693bcqC1l1wcY">
+        <button class="add-to-cart-btn">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </div>
+      <div class="product-info">
+        <div>
+          <h3>Lampe de Bureau Flux</h3>
+          <p class="subtitle">Éclairage Architectural</p>
+        </div>
+        <span class="price">185 €</span>
+      </div>
+      <button class="details-btn">Voir les détails</button>
+    </article>
+
     
+    <article class="product-card">
+      <div class="product-image-wrap">
+        <img alt="Coussins en Lin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2mCZzU2XeE1WA7BlBKoNBpE86NZbrDyXQDeGfWA609QtDCV5DP3bzkpiXk_Axb4ikna4Nf0mVNwp1jA4GDtKCmRRsmaz3p5Qa6BIGEQUZPte6ngUmW_YpwAhfpXOQPoofLH-dUa5VKJCdyh8pwajSWtmKwj7vhF474_A4buBaZ8NzHa23tLe5cMaUBidzH0vDyPGL9RMuRzN01QMixdFDbcW3scDnxra79Y_DBRwkCzVSXewB3AWJ_y31Y6op2NNMm7RopHOVEao">
+        <div class="badge promo"><span>Promotion</span></div>
+        <button class="add-to-cart-btn">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </div>
+      <div class="product-info">
+        <div>
+          <h3>Coussins en Lin</h3>
+          <p class="subtitle">Lin Bio Scandinave</p>
+        </div>
+        <div class="price-block">
+          <span class="price">45 €</span>
+          <span class="price-old">65 €</span>
+        </div>
+      </div>
+      <button class="details-btn">Voir les détails</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image-wrap">
+        <img alt="Carafe Pureté" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2XVrlIu81x9Qqyxr0fXSEVPczRjyMpluK7WYOWJ0AOnjK5QtU-7rWY1NCl-soQVwfjlXYScN7tDyYmRVssORKiMUwN4OL5HCPVS73PvmLE98IHlqACGjDcDA2jHejGlVSPjTcq021vwb-i99w4KonrBN9-b1p7qVxyc5qQTzCIZXsJ3w-Kdxh-nY9DD7dB1_-SEowxXYg4U6T9cx1xN8wPhGcAsiwN2WpXqymaNURkeB_BmUW4Ak_Iqb1KoHV16NbYTlf46VHfZA">
+        <button class="add-to-cart-btn">
+          <span class="material-symbols-outlined">add_shopping_cart</span>
+        </button>
+      </div>
+      <div class="product-info">
+        <div>
+          <h3>Carafe Pureté</h3>
+          <p class="subtitle">Cristallin Soufflé</p>
+        </div>
+        <span class="price">78 €</span>
+      </div>
+      <button class="details-btn">Voir les détails</button>
+    </article>
+
+  </div>
+
+  <div class="pagination">
+    <button class="page-nav-btn" disabled>
+      <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <span class="page-ellipsis">...</span>
+    <button class="page-btn">12</button>
+    <button class="page-nav-btn">
+      <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+  </div>
+
+</main>
 </body>
 </html>
