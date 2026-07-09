@@ -33,7 +33,7 @@ Ce projet consiste à concevoir une landing page moderne destinée à promouvoir
 - Git
 - GitHub
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```text
 TechHorizon_Group1_Projet2_S5/
@@ -48,7 +48,7 @@ TechHorizon_Group1_Projet2_S5/
 └── contact/
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 Le projet est optimisé pour :
 
@@ -56,13 +56,13 @@ Le projet est optimisé pour :
 - Tablettes
 - Ordinateurs
 
-## 🚀 Installation
+## Installation
 
 1. Cloner le dépôt Git.
 2. Ouvrir le dossier du projet.
 3. Lancer le fichier `index.html` dans un navigateur.
 
-## 🎨 Charte graphique
+## Charte graphique
 
 Le design met l'accent sur :
 
@@ -72,12 +72,12 @@ Le design met l'accent sur :
 - une bonne lisibilité ;
 - une palette de couleurs cohérente.
 
-## 👥 Équipe
+## Équipe
 
 Projet réalisé par le groupe **TechHorizon** dans le cadre de la **Semaine 5 d'Akieni Academy**.
 
 
-## 📄 Licence
+## Licence
 
 Projet réalisé à des fins pédagogiques.
 ## auteurs 
