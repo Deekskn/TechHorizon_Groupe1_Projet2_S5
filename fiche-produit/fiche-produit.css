@@ -1,0 +1,444 @@
+/* ==========================================================================
+   produit.css — Fiche produit (autonome)
+   Contient ses propres tokens de couleur (mêmes valeurs que le design
+   système de la boutique) : ce fichier n'a besoin d'aucun autre CSS pour
+   s'afficher correctement.
+   ========================================================================== */
+
+:root {
+  --primary: #004ac6;
+  --on-surface: #121c2a;
+  --on-surface-variant: #434655;
+  --outline: #737686;
+  --outline-variant: #c3c6d7;
+  --surface-container-low: #eff4ff;
+  --surface-container-lowest: #ffffff;
+  --background: #f8f9ff;
+  --rating-star: #855300;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--on-surface);
+  background-color: var(--background);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* -------------------- Conteneur principal -------------------- */
+
+.product-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .product-main { padding: 40px 24px; }
+}
+
+@media (min-width: 1024px) {
+  .product-main { padding: 48px 40px; }
+}
+
+.product-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .product-top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+  }
+}
+
+/* -------------------- Fil d'Ariane -------------------- */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--on-surface-variant);
+}
+
+.breadcrumb a {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { color: var(--primary); }
+
+.breadcrumb .current {
+  font-weight: 600;
+  color: var(--on-surface);
+}
+
+.breadcrumb .material-symbols-outlined {
+  font-size: 8px;
+  color: var(--on-surface-variant);
+}
+
+/* -------------------- Galerie -------------------- */
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 1024px) {
+  .product-gallery {
+    flex: 1 1 50%;
+    max-width: 560px;
+    position: sticky;
+    top: 40px;
+  }
+}
+
+.gallery-main {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background-color: var(--surface-container-low);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-main .material-symbols-outlined {
+  font-size: 96px;
+  color: var(--primary);
+  opacity: 0.35;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 16px;
+}
+
+.gallery-thumb {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container-low);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery-thumb .material-symbols-outlined {
+  font-size: 24px;
+  color: var(--outline);
+}
+
+.gallery-thumb.active {
+  border: 2px solid var(--primary);
+}
+
+.gallery-thumb.active .material-symbols-outlined {
+  color: var(--primary);
+}
+
+/* -------------------- Informations produit -------------------- */
+
+.product-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .product-info-col { flex: 1 1 50%; }
+}
+
+.product-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 24px;
+}
+
+.eyebrow-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(0, 74, 198, 0.1);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.product-heading h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--on-surface);
+  margin: 9px 0 0;
+}
+
+.product-heading .price {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--primary);
+  margin: 0;
+}
+
+.product-heading .price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.product-heading .price-old {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--outline);
+  text-decoration: line-through;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.product-rating .stars {
+  display: flex;
+  gap: 2px;
+  color: var(--rating-star);
+}
+
+.product-rating .stars .material-symbols-outlined {
+  font-size: 20px;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.product-rating .stars .material-symbols-outlined.empty {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  color: var(--outline-variant);
+}
+
+.product-rating .rating-count {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--on-surface-variant);
+}
+
+.product-description {
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--on-surface);
+}
+
+.feature-list .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 18px;
+  flex: none;
+  margin-top: 2px;
+}
+
+/* -------------------- Sélecteurs (taille / quantité) -------------------- */
+
+.selection-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.control-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  color: var(--on-surface);
+  margin-bottom: 12px;
+}
+
+.option-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.option-btn {
+  box-sizing: border-box;
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-lowest);
+  color: var(--on-surface-variant);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.option-btn.selected {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--outline-variant);
+  border-radius: 8px;
+  background: var(--surface-container-lowest);
+  width: fit-content;
+}
+
+.quantity-control button {
+  width: 40px;
+  height: 42px;
+  border: none;
+  background: none;
+  color: var(--on-surface);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantity-control span {
+  min-width: 32px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--on-surface);
+}
+
+/* -------------------- Boutons d'action -------------------- */
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  background: var(--surface-container-lowest);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* -------------------- Infos livraison / retours -------------------- */
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--outline-variant);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--on-surface-variant);
+}
+
+.meta-info .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-info .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* -------------------- Section détails -------------------- */
+
+.details-section {
+  border-top: 1px solid var(--outline-variant);
+  padding: 48px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .details-section {
+    padding: 64px 0 48px;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .detail-block { flex: 1 1 0; }
+}
+
+.detail-block h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--on-surface);
+  margin: 0 0 16px;
+}
+
+.detail-block p {
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
