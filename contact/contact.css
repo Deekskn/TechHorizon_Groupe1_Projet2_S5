@@ -1,0 +1,135 @@
+.contact {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--surface-container-lowest);
+    border-radius: var(--btn-raduis);
+}
+
+/*---------------- Article ----------------*/
+.debut{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.debut h1{
+    font-family: "Manrope", sans-serif;
+    font-size: 2rem;
+    color: var(--on-surface);
+    margin-bottom: 10px;
+}
+
+.debut p{
+    color: var(--on-surface-variant);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*---------------- Formulaire ----------------*/
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact label {
+    font-weight: 600;
+    color: var(--on-surface);
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--btn-raduis);
+    background: var(--surface-container-low);
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.contact button {
+    align-self: flex-start;
+    padding: 12px 30px;
+    border: none;
+    border-radius: var(--btn-raduis);
+    background: var(--primary);
+    color: var(--surface-container-lowest);
+    cursor: pointer;
+}
+
+/*---------------- Responsive ----------------*/
+
+@media screen and (max-width: 768px) {
+
+    .contact {
+        width: 100%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .contact header {
+        margin-bottom: 25px;
+    }
+
+    .contact h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact p {
+        font-size: 15px;
+    }
+
+    .contact form {
+        gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .contact textarea {
+        min-height: 140px;
+    }
+
+    .contact button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .contact {
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    .contact h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    .contact label {
+        font-size: 14px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 14px;
+    }
+
+    .contact button {
+        font-size: 15px;
+    }
+}
